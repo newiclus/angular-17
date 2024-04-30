@@ -1,0 +1,18 @@
+<section class="container">
+  @if (isLogged) {
+  <h2 class="text-lg font-bold text-black">Welcome {{ username }}</h2>
+  <figure>
+    <nz-avatar
+      [nzSize]="64"
+      nzSrc="https://github.com/newiclus.png"
+    ></nz-avatar>
+  </figure>
+
+  } @else {
+  <h3 class="text-lg font-bold text-black">Getting started:</h3>
+  <p class="text-black pl-16 mb-6 mt-3">
+    Sign in to access your account, manage your profile, and view your progress.
+  </p>
+  <app-signin-button></app-signin-button>
+  }
+</section>

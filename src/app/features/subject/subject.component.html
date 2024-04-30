@@ -1,0 +1,6 @@
+<h3>Courses List</h3>
+@for (subject of list; track subject.id) {
+<ul>
+  <li>Subject: {{ subject.name }} - Teacher: {{ subject.teacher }}</li>
+</ul>
+}

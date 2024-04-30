@@ -1,0 +1,33 @@
+<main>
+  <app-navigation
+    [isLogged]="isLogged"
+    (signInEvent)="getLoginStatus($event)"
+  ></app-navigation>
+
+  <section class="bg-cyan-400">
+    <div class="grid grid-cols-2 gap-1.5 max-w-4xl mx-auto px-4 py-8">
+      <div class="flex-1">
+        <h1 class="text-6xl font-bold text-black">{{ title }}</h1>
+        <p class="text-black mt-6 text-xl">
+          Don’t settle for an LMS with basic capabilities and poor UX. With
+          Intellum’s all-in-one EdTech for business solution, you can build the
+          eLearning destination of your dreams.
+        </p>
+      </div>
+
+      <div class="flex-1 text-right">
+        <div class="pill-group">
+          <app-user></app-user>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="body">
+    <div class="max-w-4xl mx-auto px-4 py-8">
+      <app-subject></app-subject>
+    </div>
+  </section>
+</main>
+
+<router-outlet />
